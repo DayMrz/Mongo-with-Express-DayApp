@@ -1,0 +1,14 @@
+<%- include('partials/main/head')%>
+    <%- include('partials/main/header')%>
+
+        <h1>Manga</h1>
+        <ul>
+            <% for(let manga of mangas) { %>
+                <li><a href="/views/products/<%= manga._id %>">
+                        <%= manga.name %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+
+        <%- include('partials/main/footer') %>
