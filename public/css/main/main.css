@@ -171,11 +171,9 @@ nav li {
     box-shadow: var(--shadow-cards-initial);
     min-height: 29vmin;
     list-style: none;
-
     margin: .2rem;
     padding: .5rem;
     width: 21vmin;
-
 }
 .card__list:focus,
 .card__list:hover,

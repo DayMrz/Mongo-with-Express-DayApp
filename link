@@ -1,0 +1,52 @@
+import "./styles.css";
+
+const form = document.querySelector("form");
+
+function sendForm(event) {
+  event.preventDefault();
+  const form = event.target;
+  const { name: nameInput, email: emailInput } = form;
+  console.log("form sended", {
+    name: nameInput.value,
+    email: emailInput.value
+  });
+}
+
+form.addEventListener("submit", sendForm);
+
+
+
+import "./styles.css";
+
+const form = document.querySelector("form");
+
+function sendForm(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const data = new FormData(form);
+  const name = data.get("name");
+
+  console.log("form sended", name, data.get("email"));
+}
+
+form.addEventListener("submit", sendForm);
+
+
+import "./styles.css";
+
+const form = document.querySelector("form");
+const inputs = document.querySelectorAll("input");
+
+function calcData() {
+  const data = new FormData(form);
+  const name = data.get("name");
+
+  console.log("calc something", name, data.get("email"));
+}
+
+// for (let i = 0; i < inputs.length; i++) {
+//   inputs[i].addEventListener("keyup", calcData);
+// }
+
+inputs.forEach((input) => input.addEventListener("keyup", calcData));
